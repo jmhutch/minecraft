@@ -3,8 +3,9 @@ layout: default
 ---
 
 <div class="home">
-
+<div>
 hi
+</div>
 
   {% if site.show_posts %}
   <h1 class="page-heading">Posts</h1>
@@ -22,3 +23,4 @@ hi
   {% endif %}
 
 </div>
+

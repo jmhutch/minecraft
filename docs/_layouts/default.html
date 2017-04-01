@@ -23,6 +23,18 @@
         </section>
       </div>
     </header>
+    <div style="width: 20%; float: right;">
+        <aside>
+            <ul>
+            {% assign pages = site.pages | sort:"order" %}
+            {% for page in pages %}
+                {% if page.title %}
+                <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </aside>
+    </div>
 
     <div class="container">
       <section id="main_content">
