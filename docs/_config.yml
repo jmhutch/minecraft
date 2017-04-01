@@ -16,7 +16,7 @@
 title: "Minecraft Guide"
 email: j@splatlabs.com
 description: > # this means to ignore newlines until "baseurl:"
-  Modern Minecraft modding Guide
+  Modern Minecraft Modding Guide
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ""
