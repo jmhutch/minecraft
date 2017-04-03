@@ -6,7 +6,10 @@ published: true
 ### Welcome!
 
 
-My goal is to provide an updated guide to minecraft modding that falls between the common "type this, then this..." youtube tutorial that gives you (hopefully) working examples but little to no explanation or theory - and the typical forum response of "look it up in the vanilla code". I'll provide examaples and references to vanilla code, along with explanations to the best of my ability. As somebody learning Minecraft modding myself, I find it's the best time to document the process - as you go through it - since you notice all the details that tend to be glossed over with experience, and have to do a good deal of research as it is, might as well document it!
+My goal is to provide an updated guide to minecraft modding that falls between the common "type this, then this..." youtube tutorial that gives you (hopefully) working examples but little to no explanation or theory - and the typical forum response of "look it up in the vanilla code". I'll provide examaples and references to vanilla code, along with explanations to the best of my ability. 
+
+
+As somebody learning Minecraft modding myself, I find it's the best time to document the process - as you go through it - since you notice all the details that tend to be glossed over with experience, and have to do a good deal of research as it is, might as well document it!
 
 
 Disclaimer: general Java knowledge is required, though I'll attempt to throw in some pointers on concepts and techniques that are slightly more involved or advanced...
