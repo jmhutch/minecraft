@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Home
 permalink: /
 order: 1
 ---
