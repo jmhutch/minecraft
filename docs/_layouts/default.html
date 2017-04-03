@@ -25,31 +25,27 @@
     </header>
     <div style="width: 20%; float: right;">
         <aside>
-		<p>
-		<div class="page-heading">Articles</div>          
-          <ul>
+  			<div class="page-heading">Articles</div>          
+          	<ul>
             {% assign pages = site.pages | sort:"order" %}
             {% for page in pages %}
                 {% if page.title %}
                 <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
                 {% endif %}
             {% endfor %}
-            </ul>
-        </p>
-      	<p>
-  		{% if site.show_posts %}
-  			<div class="page-heading">Posts</div>
-  			<ul class="post-list">
-    		{% for post in site.posts %}
-      			<li>
-        			<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-       				<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      			</li>
-    		{% endfor %}
-  			</ul>
-  		{% endif %}
-	    </p>
-      </aside>
+          	</ul>
+  		  	{% if site.show_posts %}
+  				<div class="page-heading">Posts</div>
+  				<ul class="post-list">
+    			{% for post in site.posts %}
+      				<li>
+        				<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+       					<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      				</li>
+    			{% endfor %}
+  				</ul>
+  			{% endif %}
+     	 </aside>
     </div>
     <div class="container">
       <section id="main_content">
