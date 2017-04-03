@@ -1,6 +1,7 @@
 ---
-layout: default
-published: true
+title: Getting Started
+permalink: /
+order: 1
 ---
 
 ### Welcome!
