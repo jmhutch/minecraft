@@ -31,3 +31,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
 show_posts: false
+
+google_analytics: UA-96700041-1
