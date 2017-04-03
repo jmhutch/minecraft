@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 permalink: /getting_started/
-order: 2
+order: 3
 ---
 
 getting started...
