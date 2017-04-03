@@ -30,4 +30,4 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-show_posts: false
+show_posts: true
