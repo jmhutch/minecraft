@@ -34,7 +34,7 @@
                 {% endif %}
             {% endfor %}
           	</ul>
-  		  	{% if site.show_posts %}
+  		  	{% if site.show_posts && site.posts.length > 0 %}
   				<div class="page-heading">Posts</div>
   				<ul class="post-list">
     			{% for post in site.posts %}
