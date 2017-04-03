@@ -24,6 +24,7 @@ ToDo:
 - [ ] Events - make things do stuff
 - [ ] TileEntities - aka how to associate data with blocks
 - [ ] TileEntities with storage - see above, plus storage!
+- [ ] Networking - now that we have data, we need to sync it
 - [ ] Tools - sidestep into modelling tools and utils to prepare for...
 - [ ] Entities - that topic every other tutorial avoids! Models, Entities, Renderers, oh my!
 - [ ] Gui stuff - UIs for things.
