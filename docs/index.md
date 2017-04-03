@@ -4,6 +4,6 @@ published: true
 ---
 
 <div class="home">
-hi
+test
 
 </div>
