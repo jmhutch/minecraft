@@ -1,7 +1,7 @@
 ---
 title: Coding Setup
 permalink: /setup/
-order: 1
+order: 2
 ---
 
 setup stuff
