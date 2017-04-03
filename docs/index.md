@@ -3,7 +3,7 @@ layout: default
 published: true
 ---
 
-Welcome!
+##Welcome!
 
 
 My goal is to provide an updated guide to minecraft modding that falls between the common "type this, then this..." youtube tutorial that gives you (hopefully) working examples but little to no explanation or theory - and the typical forum response of "look it up in the vanilla code".
