@@ -2,6 +2,8 @@
 title: Getting Started
 permalink: /getting_started/
 order: 3
+comments: true
+disqus: gettingstarted
 ---
 
 getting started...

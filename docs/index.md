@@ -37,4 +37,4 @@ ToDo:
 - [ ] Dimensions - playing with dimensional creation and travel
 - [ ] Config stuff
 - [ ] Update this list with whatever else I've missed...
-- [ ] Add comment/discussion system to article pages
+- [X] Add comment/discussion system to article pages
