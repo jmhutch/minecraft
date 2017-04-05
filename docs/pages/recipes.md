@@ -191,11 +191,6 @@ public class RecipeHandler {
     registerOreRecipes();
   }
   
-  public static void registerOreRecipes() {
-    GameRegistry.addSmelting(new ItemStack(ModBlocks.OBSIDIAN_ORE), 
-        new ItemStack(ModItems.OBSIDIAN_INGOT), 1);
-  }
-  
   private static void registerToolRecipe(Item ingot, Item pickaxe, Item axe, Item shovel, Item hoe, Item sword) {
     GameRegistry.addRecipe(new ItemStack(pickaxe), new Object[] { "III", " S ", " S ", 'I', ingot, 'S', Items.STICK });
     GameRegistry.addRecipe(new ItemStack(axe), new Object[] { "II ", "IS ", " S ", 'I', ingot, 'S', Items.STICK });
