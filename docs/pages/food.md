@@ -6,6 +6,8 @@ comments: true
 disqus: food
 ---
 
+Creating a `ItemFood` is a lot like creating a normal `Item`, except there are different Overrides and such and we extend `ItemFood` instead of `Item`. Otherwise we still have to create, register, and register a renderer as usual.
+
 Under `com.example.mem.items` add the class `BaseFoodItem`.
 
 ```java
@@ -33,12 +35,14 @@ public class BaseFoodItem extends ItemFood {
 
 This creates a nice base food class that has 2 constructors - one with and one without saturation arguments, to mirror our `super()` constructors - and adds an option to pass in any number of `PotionEffect` effects (including none) that will be applied upon eating said food.
 
+You could, of course, forego this class altogether and just write each food `Item` separately, extending `ItemFood` directly in each. This may be a better option if you have few foods that have a lot of functionality. Abstracting the base class out is a better option if you plan to have several foods that are accomodatable with a few constructor overloads.
+
 Then, in the same package, create your class for your food item, like `ItemHealingHerb` and add:
 
 ```java
 public class ItemHealingHerb extends BaseFoodItem {
   public ItemHealingHerb(String name, CreativeTabs tab) {
-    super(5, 1.0F, true, new PotionEffect(Potion.getPotionById(21), 10, 100, true, true));
+    super(5, 1.0F, true, new PotionEffect(MobEffects.REGENERATION, 400, 1);
     
     this.setRegistryName(name);
     this.setUnlocalizedName(this.getRegistryName().getResourcePath());    
@@ -48,14 +52,15 @@ public class ItemHealingHerb extends BaseFoodItem {
 
 This specifies all our attributes for our food item by passing them to the `super()` constructor, then we add the `Item` to the `ModItems` class like anything else. Note that we don't use the `BaseItem` to inherit from since we need to inherit from `ItemFood` instead of `Item` to get overrides like `onFoodEaten` and other foodie behavoirs.
 
+Note that although there are 10 hunger "bars" in the UI, there are actually 20 points. Using this example we feed only 1/4 of the player's hunger with 5 points.
+
 In `ModItems` add:
 
 ```java
 public static Item HEALING_HERB = new ItemHealingHerb("healing_herb", Ref.tabExample);
 
 ```
-
-and update `RegisterItemHandler` to add the new `Item`:
+to create the object instance and update `RegisterItemHandler` to add the new `Item`:
 
 ```java
   public static Item[] items = {
@@ -63,7 +68,7 @@ and update `RegisterItemHandler` to add the new `Item`:
   };
 ```
 
-Which instantiates and registers our food.
+Which instantiates and registers our food. Since `ItemFood` extends `Item` we can squish it into the Item[] array without a problem.
 
 Don't forget the `healing_herb.json` file:
 
@@ -76,5 +81,7 @@ Don't forget the `healing_herb.json` file:
 }
 ```
 
-and a texture in `assets.textures.item`.
+and a texture in `assets.mem.textures.item`.
+
+Now pop into the game, /give @p mem:healing_herb, give yourself /effect @p hunger 10 100 and get nice and hungry and eat some of your food!
 

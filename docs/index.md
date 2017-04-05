@@ -25,18 +25,24 @@ ToDo:
 - [x] Getting Started - basic mod setup/boilerplate and common code structure
 - [x] Items - create custom items
 - [x] Textures and json - what, where, how
-- [ ] CreativeTabs - quick but necessary... gotta have custom tabs
+- [x] CreativeTabs - quick but necessary... gotta have custom tabs
+- [x] Making Food - yum?
+- [x] Recipes
 - [ ] Blocks - create custom blocks and events for them
 - [ ] Blockstates - exciting topic everybody loves!
 - [ ] Events - make things do stuff
 - [ ] TileEntities - aka how to associate data with blocks
 - [ ] TileEntities with storage - see above, plus storage!
+- [ ] Crops
 - [ ] Networking - now that we have data, we need to sync it
+- [ ] Capbilities
 - [ ] Tools - sidestep into modelling tools and utils to prepare for...
 - [ ] Entities - that topic every other tutorial avoids! Models, Entities, Renderers, oh my!
 - [ ] Gui stuff - UIs for things.
 - [ ] WorldGen - Add Ore, Trees, etc. and modify biomes in general
 - [ ] Dimensions - playing with dimensional creation and travel
+- [ ] Achievements - it'll be one if i get this far...
 - [ ] Config stuff
-- [ ] Update this list with whatever else I've missed...
+- [ ] Creating an API
+- [x] Update this list with whatever else I've missed...
 - [x] Add comment/discussion system to article pages
