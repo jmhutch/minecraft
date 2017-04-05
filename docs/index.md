@@ -22,9 +22,9 @@ Disclaimer: general Java knowledge is required, though I'll attempt to throw in 
 ToDo:
 
 - [ ] Setup Guide - install Eclipse, get Forge, set up workspace
-- [ ] Getting Started - basic mod setup/boilerplate and common code structure
-- [ ] Items - create custom items
-- [ ] Textures and json - what, where, how
+- [x] Getting Started - basic mod setup/boilerplate and common code structure
+- [x] Items - create custom items
+- [x] Textures and json - what, where, how
 - [ ] CreativeTabs - quick but necessary... gotta have custom tabs
 - [ ] Blocks - create custom blocks and events for them
 - [ ] Blockstates - exciting topic everybody loves!
@@ -39,4 +39,4 @@ ToDo:
 - [ ] Dimensions - playing with dimensional creation and travel
 - [ ] Config stuff
 - [ ] Update this list with whatever else I've missed...
-- [X] Add comment/discussion system to article pages
+- [x] Add comment/discussion system to article pages
