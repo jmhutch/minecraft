@@ -1,2 +1,2 @@
-This project includes both the "Creating Items" and "Textures and json" chapters.
+This project includes content for "Creating Items", "Textures and json", and "Creative Tabs" as each of them contain very trivial code changes and all are required to make a "complete" custom item...
 

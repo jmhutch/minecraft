@@ -1,5 +1,7 @@
 package com.example.mem.item;
 
+import com.example.mem.Ref;
+
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -12,7 +14,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModItems {
-	public static Item OBSIDIAN_INGOT = new ItemBase("obsidian_ingot", CreativeTabs.BUILDING_BLOCKS);
+	public static Item OBSIDIAN_INGOT = new ItemBase("obsidian_ingot", Ref.tabExample);
 
 	@Mod.EventBusSubscriber
 	public static class RegisterItemHandler {
