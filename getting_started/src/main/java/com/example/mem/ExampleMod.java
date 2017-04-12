@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class ExampleMod
 {
   @Instance(Ref.MODID)
-  public static Mod INSTANCE;
+  public static ExampleMod INSTANCE;
 
   @SidedProxy(clientSide = "com.example.mem.proxy.ClientProxy", serverSide = "com.example.mem.proxy.CommonProxy")
   public static CommonProxy proxy;
