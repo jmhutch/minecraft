@@ -8,18 +8,18 @@ disqus: food
 
 Creating a `ItemFood` is a lot like creating a normal `Item`, except there are different Overrides and such and we extend `ItemFood` instead of `Item`. Otherwise we still have to create, register, and register a renderer as usual.
 
-Under `com.example.mem.items` add the class `BaseFoodItem`.
+Under `com.example.mem.items` add the class `ItemFoodBase`.
 
 ```java
-public class BaseFoodItem extends ItemFood {
+public class ItemFoodBase extends ItemFood {
   PotionEffect[] effects;
 
-  public BaseFoodItem(int amount, boolean isWolfFood, PotionEffect... potienEffects) {
+  public ItemFoodBase(int amount, boolean isWolfFood, PotionEffect... potienEffects) {
     super(amount, isWolfFood);
     this.effects = potienEffects;
   }
 
-  public BaseFoodItem(int amount, Float saturation, boolean isWolfFood, PotionEffect... potionEffects) {
+  public ItemFoodBase(int amount, Float saturation, boolean isWolfFood, PotionEffect... potionEffects) {
     super(amount, saturation, isWolfFood);
     this.effects = potionEffects;
   }
@@ -40,7 +40,7 @@ You could, of course, forego this class altogether and just write each food `Ite
 Then, in the same package, create your class for your food item, like `ItemHealingHerb` and add:
 
 ```java
-public class ItemHealingHerb extends BaseFoodItem {
+public class ItemHealingHerb extends ItemFoodBase {
   public ItemHealingHerb(String name, CreativeTabs tab) {
     super(5, 1.0F, true, new PotionEffect(MobEffects.REGENERATION, 400, 1);
     

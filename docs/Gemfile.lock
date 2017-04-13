@@ -198,6 +198,7 @@ DEPENDENCIES
   github-pages
   jekyll-theme-tactile
   jekyll-theme-with-hack-css
+  jemoji
 
 BUNDLED WITH
    1.13.7

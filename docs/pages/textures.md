@@ -12,7 +12,7 @@ Lacking the means or desire to make your own textures, you can always just copy 
 
 To start, create the folder `src/main/resources` if it doesn't exist (your main code being in src/main/java, for reference).
 
-Under resoources, add the packages `assets.mem`, `assets.mem.blockstates`, `assets.mem.lang`, `assets.mem.models`, `assets.mem.models.block`, `assets.mem.models.item`, `assets.mem.textures`, `assets.mem.textures.blocks`, and `assets.mem.textures.items`.
+Under resoources, add the packages `assets.mem.blockstates`, `assets.mem.models.block`, `assets.mem.models.item`, `assets.mem.textures.blocks`, and `assets.mem.textures.items`.
 
 Yes, you'll need them all, and yes, I meant to make 'item' and 'block' singular under models and plural under textures. You can technically call the textures packages whatever you want, but this is how vanilla and the vast majority of mods organize things.
 
@@ -33,7 +33,7 @@ In `assets.textures.items` add `obsidian_ingot.png` (your own or a "borrowed" im
 
 This file must be a png; if you get a 'missing texture' error and the file is definitely there, triple check that it's _definitely_ a png file (not a renamed jpg or something).
 
-Under `assets.lang` create a file `en_US.lang` with:
+If you haven't yet, under `assets.lang` create a file `en_US.lang` with:
 
 ```
 item.obsidian_ingot.name=Obsidian Ingot
@@ -87,5 +87,5 @@ We'll revisit texture json files in more detail when we cover [`Block`s](/blocks
 
 For now, if you've created the approrpiate json file, placed a png in the proper place, and, for good measure, created a nicely formatted language string, you should be able to start up the client and see your item in game - texture and all now!
 
-
+If you don't have any textures handy there are sample textures in the [github repo](https://github.com/jmhutch/minecraft) associated with these tutorials.
 
