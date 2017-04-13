@@ -1,7 +1,9 @@
 package com.example.mem.recipes;
 
+import com.example.mem.block.ModBlocks;
 import com.example.mem.item.ModItems;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -13,8 +15,18 @@ public class RecipeHandler {
 				ModItems.OBSIDIAN_SPADE, ModItems.OBSIDIAN_HOE, ModItems.OBSIDIAN_SWORD);
 		registerArmourRecipe(ModItems.OBSIDIAN_INGOT, ModItems.OBSIDIAN_HELM, ModItems.OBSIDIAN_CHEST,
 				ModItems.OBSIDIAN_LEGS, ModItems.OBSIDIAN_FEET);
+	    registerOreRecipes();
 	}
 
+	public static void registerOreRecipes() {
+			GameRegistry.addShapedRecipe(new ItemStack(Blocks.OBSIDIAN), "###", "###", "###", '#', ModItems.OBSIDIAN_INGOT);
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.OBSIDIAN_INGOT, 9), "   ", " # ", "   ", '#',
+				Blocks.OBSIDIAN);
+
+		GameRegistry.addSmelting(new ItemStack(ModBlocks.OBSIDIAN_ORE), new ItemStack(ModItems.OBSIDIAN_INGOT), 1);
+
+	}
+	
 	private static void registerToolRecipe(Item ingot, Item pickaxe, Item axe, Item shovel, Item hoe, Item sword) {
 		GameRegistry.addRecipe(new ItemStack(pickaxe),
 				new Object[] { "III", " S ", " S ", 'I', ingot, 'S', Items.STICK });
