@@ -1,0 +1,15 @@
+item.obsidian_ingot.name=Obsidian Ingot
+itemGroup.tab_Example=My Example Mod
+
+item.obsidian_axe.name=Obsidian Axe
+item.obsidian_pickaxe.name=Obsidian PickAxe
+item.obsidian_spade.name=Obsidian Shovel
+item.obsidian_sword.name=Obsidian Sword
+item.obsidian_hoe.name=Obsidian hoe
+
+item.obsidian_helm.name=Obsidian Helmet
+item.obsidian_chest.name=Obsidian Chestplate
+item.obsidian_feet.name=Obsidian Booties
+item.obsidian_legs.name=Obsidian Leggings
+
+tile.obsidian_ore.name=Obsidian Ore

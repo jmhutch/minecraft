@@ -6,9 +6,9 @@ comments: true
 disqus: recipes
 ---
 
-To illustrate recipes we're going to take our Obsidian Ingot `Item`, add a few classes for Armor and Tool creation, then create recipes to turn Ingots into useful Stuff.
+To illustrate recipes we're going to take our Obsidian Ingot `Item`, add a few classes for Armor and Tool creation, then create recipes to turn Ingots into useful Stuff. This will also illustrate how simple it is to add new `Item`s now that your foundation classes are set up.
 
-Armor is the easiest, since we only need to extend `ItemArmor` for all 4 pieces. So in `com.example.mem.items` create the class `ItemModArmor` with:
+Armor is the easiest, since we only need to extend `ItemArmor` for all 4 pieces. So in `com.example.mem.items` create the class `ItemModArmor` that extends `ItemArmor` with:
 
 ```java
 public class ItemModArmor extends ItemArmor {
@@ -139,11 +139,11 @@ Now we can go back to `ModItems` and add a `ToolMaterial` and our tools:
 ```java
   public static final ToolMaterial obsidianMaterial = EnumHelper.addToolMaterial(Ref.MODID + ":obsidian", 0, 1000, 1.0F, 5.0F, 100);
 
-  public static Item OBSIDIAN_PICKAXE = new ItemModPickaxe(obsidianMaterial, "obsidian_pickaxe", Ref.tabTech);
-  public static Item OBSIDIAN_AXE = new ItemModAxe(obsidianMaterial, 1.0F, 1.0F, "obsidian_axe", Ref.tabTech);
-  public static Item OBSIDIAN_SPADE = new ItemModSpade(obsidianMaterial, "obsidian_spade", Ref.tabTech);
-  public static Item OBSIDIAN_HOE = new ItemModHoe(obsidianMaterial, "obsidian_hoe", Ref.tabTech);
-  public static Item OBSIDIAN_SWORD = new ItemModSword(obsidianMaterial, "obsidian_sword", Ref.tabTech);
+  public static Item OBSIDIAN_PICKAXE = new ItemModPickaxe(obsidianMaterial, "obsidian_pickaxe", Ref.tabExample);
+  public static Item OBSIDIAN_AXE = new ItemModAxe(obsidianMaterial, 1.0F, 1.0F, "obsidian_axe", Ref.tabExample);
+  public static Item OBSIDIAN_SPADE = new ItemModSpade(obsidianMaterial, "obsidian_spade", Ref.tabExample);
+  public static Item OBSIDIAN_HOE = new ItemModHoe(obsidianMaterial, "obsidian_hoe", Ref.tabExample);
+  public static Item OBSIDIAN_SWORD = new ItemModSword(obsidianMaterial, "obsidian_sword", Ref.tabExample);
 ```
 
 Now, to add another set of armor and tools, if you're so inclined, just create a new `ToolMaterial` or `ArmorMaterial` and create a new set of armor or tools in `ModItems`.
@@ -188,7 +188,6 @@ public class RecipeHandler {
   public static void register() {
     registerToolRecipe(ModItems.OBSIDIAN_INGOT, ModItems.OBSIDIAN_PICKAXE, ModItems.OBSIDIAN_AXE, ModItems.OBSIDIAN_SPADE, ModItems.OBSIDIAN_HOE, ModItems.OBSIDIAN_SWORD);
     registerArmourRecipe(ModItems.OBSIDIAN_INGOT, ModItems.OBSIDIAN_HELM, ModItems.OBSIDIAN_CHEST, ModItems.OBSIDIAN_LEGS, ModItems.OBSIDIAN_FEET);
-    registerOreRecipes();
   }
   
   private static void registerToolRecipe(Item ingot, Item pickaxe, Item axe, Item shovel, Item hoe, Item sword) {
@@ -220,6 +219,8 @@ Last, we need to register our `RecipeHandler`, which (until I figure out which `
   }
 ```
 
-Now if you run the client you should be able to grab a stack of ingots and create some Obsidian armor and tools.
+Add textures and json as per usual; See the [github repo](https://github.com/jmhutch/minecraft/tree/master/05-recipes) for examples.
+
+Now if you run the client you should be able to grab a stack of ingots and sticks and create some Obsidian armor and tools.
 
 

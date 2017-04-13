@@ -87,5 +87,5 @@ We'll revisit texture json files in more detail when we cover [`Block`s](/blocks
 
 For now, if you've created the approrpiate json file, placed a png in the proper place, and, for good measure, created a nicely formatted language string, you should be able to start up the client and see your item in game - texture and all now!
 
-If you don't have any textures handy there are sample textures in the [github repo](https://github.com/jmhutch/minecraft) associated with these tutorials.
+If you don't have any textures handy there are sample textures in the [github repo](https://github.com/jmhutch/minecraft/tree/master/03-creating_items) associated with these tutorials.
 
