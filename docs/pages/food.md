@@ -8,7 +8,7 @@ disqus: food
 
 Creating a `ItemFood` is a lot like creating a normal `Item`, except there are different Overrides and such and we extend `ItemFood` instead of `Item`. Otherwise we still have to create, register, and register a renderer as usual.
 
-Under `com.example.mem.items` add the class `ItemFoodBase`.
+Under `com.example.mem.items` add the class `ItemFoodBase` that extends `ItemFood`.
 
 ```java
 public class ItemFoodBase extends ItemFood {
@@ -37,17 +37,18 @@ This creates a nice base food class that has 2 constructors - one with and one w
 
 You could, of course, forego this class altogether and just write each food `Item` separately, extending `ItemFood` directly in each. This may be a better option if you have few foods that have a lot of functionality. Abstracting the base class out is a better option if you plan to have several foods that are accomodatable with a few constructor overloads.
 
-Then, in the same package, create your class for your food item, like `ItemHealingHerb` and add:
+Then, in the same package, create your class for your food item, like `ItemHealingHerb` that extends `ItemFoodBase` and add:
 
 ```java
 public class ItemHealingHerb extends ItemFoodBase {
   public ItemHealingHerb(String name, CreativeTabs tab) {
-    super(5, 1.0F, true, new PotionEffect(MobEffects.REGENERATION, 400, 1);
+    super(5, 1.0F, true, new PotionEffect(MobEffects.REGENERATION, 400, 1));
     
     this.setRegistryName(name);
     this.setUnlocalizedName(this.getRegistryName().getResourcePath());    
     this.setCreativeTab(tab);
   }
+}
 ```
 
 This specifies all our attributes for our food item by passing them to the `super()` constructor, then we add the `Item` to the `ModItems` class like anything else. Note that we don't use the `BaseItem` to inherit from since we need to inherit from `ItemFood` instead of `Item` to get overrides like `onFoodEaten` and other foodie behavoirs.
@@ -83,5 +84,5 @@ Don't forget the `healing_herb.json` file:
 
 and a texture in `assets.mem.textures.item`.
 
-Now pop into the game, /give @p mem:healing_herb, give yourself /effect @p hunger 10 100 and get nice and hungry and eat some of your food!
+Now pop into the game, /give @p mem:healing_herb, give yourself /effect @p hunger 10 100 and get nice and hungry and eat some of your food! :herb:
 
